@@ -20,32 +20,32 @@ Anomaly detection is a critical task in various domains, including finance, cybe
 
 ## Data Preparation<a name="data-preparation"></a>
 
-In this section, we prepare the data for training and testing. The data is loaded from CSV files, and a random selection of five datasets is visualized using charts.
+In this section, I prepare the data for training and testing. The data is loaded from CSV files, and a random selection of five datasets is visualized using charts.
 
 ## Creating and Training RNN Models<a name="creating-and-training-rnn-models"></a>
 
-We create and train three different RNN models: SimpleRNN, LSTM, and GRU. These models are designed to learn patterns in the time-series data that can help identify anomalies.
+I create and train three different RNN models: SimpleRNN, LSTM, and GRU. These models are designed to learn patterns in the time-series data that can help identify anomalies.
 
 ## Preprocessing Data for Improved Performance<a name="preprocessing-data-for-improved-performance"></a>
 
-To enhance the performance of the models, we apply two preprocessing methods to the data:
+To enhance the performance of the models, I apply two preprocessing methods to the data:
 
-1. **MinMaxScaler**: We scale the data to a specified range to improve convergence during training.
-2. **Normalization using L2 norm**: We normalize the data using the L2 norm to make the models more robust to variations in scale.
+1. **MinMaxScaler**: I scale the data to a specified range to improve convergence during training.
+2. **Normalization using L2 norm**: I normalize the data using the L2 norm to make the models more robust to variations in scale.
 
-We then retrain the RNN models with the preprocessed data.
+I then retrain the RNN models with the preprocessed data.
 
 ## Training a Self-Supervised Model<a name="training-a-self-supervised-model"></a>
 
-In this section, we train a self-supervised model that uses an LSTM layer. The model is initially trained to predict the next value in the time series. We then remove the last layer of the model and add two dense layers. Finally, we fine-tune the model for anomaly detection.
+In this section, I train a self-supervised model that uses an LSTM layer. The model is initially trained to predict the next value in the time series. I then remove the last layer of the model and add two dense layers. Finally, I fine-tune the model for anomaly detection.
 
 ## Handling Unbalanced Data<a name="handling-unbalanced-data"></a>
 
-Imbalanced data is a common challenge in anomaly detection. We address this issue by downsampling the majority class to balance the dataset. This balanced dataset is used to train a GRU model for anomaly detection.
+Imbalanced data is a common challenge in anomaly detection. I address this issue by downsampling the majority class to balance the dataset. This balanced dataset is used to train a GRU model for anomaly detection.
 
 ## Statistical Anomaly Detection<a name="statistical-anomaly-detection"></a>
 
-In this section, we employ statistical methods to detect anomalies in the time-series data. We calculate Z-scores for each data point and use a predefined threshold to classify anomalies.
+In this section, I employ statistical methods to detect anomalies in the time-series data. I calculate Z-scores for each data point and use a predefined threshold to classify anomalies.
 
 ## License<a name="license"></a>
 
